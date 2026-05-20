@@ -1,0 +1,6 @@
+{
+  "name": "打地鼠遊戲",
+  "description": "具有精美深色毛玻璃設計、多樣化地鼠、極限連擊系統與動態難度的打地鼠遊戲。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* 自訂玻璃化 Glassmorphism 樣式 */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+}
+
+.glass-panel {
+  background: rgba(5, 5, 8, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  border-radius: 24px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 地鼠與炸彈的漸層 & 坑洞陰影 */
+.mole-gradient-bg {
+  background: radial-gradient(circle at 30% 30%, #a85e32, #633a1e);
+}
+
+.gold-gradient-bg {
+  background: radial-gradient(circle at 30% 30%, #ffd700, #b8860b);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.bomb-gradient-bg {
+  background: radial-gradient(circle at 30% 30%, #ff3e3e, #8b0000);
+}
+
+.hole-shadow {
+  box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+/* 霓虹與邊框發光 */
+.neon-glow-violet {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.25);
+}
+
+.neon-border-violet {
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.neon-glow-yellow {
+  box-shadow: 0 0 25px rgba(234, 179, 8, 0.35);
+}
+
+.neon-border-yellow {
+  border-color: rgba(234, 179, 8, 0.4);
+}
+
+.neon-glow-red {
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.45);
+}
+
+.neon-border-red {
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+/* 抖動動畫 */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-8px) rotate(-1deg); }
+  30% { transform: translateX(6px) rotate(1.5deg); }
+  45% { transform: translateX(-6px) rotate(-1deg); }
+  60% { transform: translateX(4px) rotate(1.0deg); }
+  75% { transform: translateX(-3px) rotate(-0.5deg); }
+  90% { transform: translateX(1px); }
+}
+
+.animate-shake {
+  animation: shake 0.45s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* 炸彈閃爍紅光 */
+@keyframes flash-red {
+  0% { transform: scale(1); background-color: rgba(239, 68, 68, 0.5); }
+  50% { background-color: rgba(239, 68, 68, 0.8); }
+  100% { transform: scale(1); background-color: transparent; }
+}
+
+.animate-flash-red {
+  animation: flash-red 0.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* 金色地鼠流光效果 */
+@keyframes gold-shimmer {
+  0% { filter: drop-shadow(0 0 2px rgba(253, 224, 71, 0.6)) brightness(1); }
+  50% { filter: drop-shadow(0 0 16px rgba(253, 224, 71, 1)) brightness(1.3); }
+  100% { filter: drop-shadow(0 0 2px rgba(253, 224, 71, 0.6)) brightness(1); }
+}
+
+.animate-gold-shimmer {
+  animation: gold-shimmer 1.2s infinite ease-in-out;
+}
+
+/* 泥土坑洞 3D 陰影 */
+.hole-inner-shadow {
+  box-shadow: inset 0 8px 16px rgba(0, 0, 0, 0.65), 
+              0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+/* 漸進式網格 */
+.radial-bg {
+  background-color: #050508;
+  background-image: radial-gradient(circle at 50% 20%, #0d0d1e 0%, #050508 100%);
+}
